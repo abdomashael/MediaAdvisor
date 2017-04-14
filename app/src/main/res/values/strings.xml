@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Media Advisor</string>
+    <string name="environment">Environment</string>
+    <string name="Job">Job</string>
+    <string name="feedback">Feedback</string>
+    <string name="media">The Media is</string>
+    <string name="stimulus_situation">Stimulus Situation</string>
+    <string name="stimulus_response">Stimulus  Response</string>
+    <string name="ok">OK</string>
+
+    <string-array name="environments">
+        <item>papers</item>
+        <item>manuals</item>
+        <item>documents</item>
+        <item>textbooks</item>
+        <item>pictures</item>
+        <item>illustrations</item>
+        <item>photographs</item>
+        <item>diagrams</item>
+        <item>machines</item>
+        <item>buildings</item>
+        <item>tools</item>
+        <item>numbers</item>
+        <item>computer</item>
+    </string-array>
+
+    <string-array name="jobs">
+        <item>lecturing</item>r
+        <item>advising</item>
+        <item>counselling</item>
+        <item>building</item>
+        <item>repairing</item>
+        <item>troubleshooting</item>
+        <item>writing</item>
+        <item>typing</item>
+        <item>drawing</item>
+        <item>evaluating</item>
+        <item>reasoning</item>
+        <item>investigating</item>
+    </string-array>
+
+    <string-array name="feedbacks">
+        <item>Yes</item>
+        <item>No</item>
+
+    </string-array>
+
+
+</resources>

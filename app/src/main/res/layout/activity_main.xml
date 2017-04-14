@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.abdo_mashael.mediaadvisor.MainActivity">
+    
+   
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:columnCount="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_columnSpan="2"
+            android:paddingBottom="20dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_row="1"
+            android:text="@string/environment" />
+
+        <Spinner
+            android:id="@+id/environment"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_row="1"
+            android:entries="@array/environments" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_row="2"
+            android:text="@string/Job" />
+
+        <Spinner
+            android:id="@+id/job"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_row="2"
+            android:entries="@array/jobs" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_row="3"
+            android:text="@string/feedback" />
+
+        <Spinner
+            android:id="@+id/feedback"
+            android:layout_width="258dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_row="3"
+            android:entries="@array/feedbacks" />
+
+        <Button
+            android:id="@+id/find"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center"
+            android:layout_marginTop="21dp"
+            android:layout_row="4"
+            android:onClick="onClickFind"
+            android:text="@string/ok"
+            android:textStyle="bold" />
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:columnCount="2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:text="@string/stimulus_situation"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sit_solve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="@string/stimulus_response"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/resp_solve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="@string/media"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:id="@+id/solution"/>
+
+
+
+
+    </GridLayout>
+
+    </LinearLayout>
+    </ScrollView>
