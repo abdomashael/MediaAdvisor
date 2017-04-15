@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private String situation, response,solution;
-    private int envirSpin,jobSpin,feedbackSpin;
+    private int envirSpin,jobSpin,feedbackSpin,visibile;
 
 
 
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
             envirSpin =savedInstanceState.getInt("envirSpin");
             jobSpin =savedInstanceState.getInt("jobSpin");
             feedbackSpin =savedInstanceState.getInt("feedbackSpin");
+            visibile =savedInstanceState.getInt("visibile");
+
 
             envir.setSelection(envirSpin);
             job.setSelection(jobSpin);
@@ -49,10 +51,11 @@ public class MainActivity extends AppCompatActivity {
             resp_solve.setText(response);
             media.setText(solution);
 
-
             GridLayout layout1 = (GridLayout) findViewById(R.id.layout1);
-            layout1.setVisibility(View.VISIBLE);
-
+            if (visibile==1)
+                layout1.setVisibility(View.VISIBLE);
+            else if (visibile==0)
+                layout1.setVisibility(View.GONE);
 
         }
     }
@@ -65,15 +68,20 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putString("solution",solution);
         savedInstanceState.putInt("envirSpin",envirSpin);
         savedInstanceState.putInt("jobSpin",jobSpin);
-        savedInstanceState.putInt("feedbackSpin",feedbackSpin);
+        savedInstanceState.putInt("visibile",visibile);
 
 
     }
 
     public void onClickFind(View view) {
         GridLayout layout1 = (GridLayout) findViewById(R.id.layout1);
-        if (layout1.getVisibility()==View.GONE)
+        if (layout1.getVisibility()==View.GONE){
+            visibile=0;
             layout1.setVisibility(View.VISIBLE);
+        }
+        if (layout1.getVisibility()==View.VISIBLE){
+            visibile=1;
+        }
 
         stiSituation Situation = new stiSituation();
         Situation.situation();

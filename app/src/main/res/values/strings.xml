@@ -4,8 +4,8 @@
     <string name="Job">Job</string>
     <string name="feedback">Feedback</string>
     <string name="media">The Media is</string>
-    <string name="stimulus_situation">Stimulus Situation</string>
-    <string name="stimulus_response">Stimulus  Response</string>
+    <string name="stimulus_situation">Stimulus Situation </string>
+    <string name="stimulus_response">Stimulus  Response </string>
     <string name="ok">OK</string>
 
     <string-array name="environments">
